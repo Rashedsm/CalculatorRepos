@@ -71,7 +71,12 @@ public class CalculatorTest {
 	
 	@Test
 	public void getHistoryTest() {
-		Calculator cal = new Calculator();
-		assertEquals("", cal.getHistory());
+		Calculator cal = new Calculator();		
+		cal.add (4);		
+		cal.subtract (2);		
+		cal.multiply (2);	
+		cal.add(5);
+		
+		assertEquals("0 + 4 - 2 * 2 + 5", cal.getHistory());
 	}
 }
