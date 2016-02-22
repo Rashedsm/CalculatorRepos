@@ -10,23 +10,27 @@ public class Calculator {
 	}
 	
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	public void add (int value) {
-		
+		total += value;
 	}
 	
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
 	public void multiply (int value) {
-		
+		total *= value;
 	}
 	
 	public void divide (int value) {
-		
+		if(value == 0){
+			total = 0;
+			return;
+		}
+		total /= value;
 	}
 	
 	public String getHistory () {

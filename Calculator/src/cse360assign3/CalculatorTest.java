@@ -33,31 +33,45 @@ public class CalculatorTest {
 
 	@Test
 	public void getTotalTest() {
-		fail();		
+		Calculator cal = new Calculator();
+		assertEquals(0, cal.getTotal());
 	}
 	
 	@Test
 	public void addTest() {
-		fail();	
+		Calculator cal = new Calculator();
+		cal.add(10);
+		assertEquals(10, cal.getTotal());
 	}
 	
 	@Test
 	public void subtractTest() {
-		fail();	
+		Calculator cal = new Calculator();
+		cal.subtract(10);
+		assertEquals(-10, cal.getTotal());
 	}
 	
 	@Test
 	public void multiplyTest() {
-		fail();	
+		Calculator cal = new Calculator();
+		cal.add(1);
+		cal.multiply(5);
+		assertEquals(5, cal.getTotal());
 	}
 	
 	@Test
 	public void divideTest() {
-		fail();	
+		Calculator cal = new Calculator();
+		cal.add(10);
+		cal.divide(2);
+		assertEquals(5, cal.getTotal());
+		cal.divide(0);
+		assertEquals(0, cal.getTotal());
 	}
 	
 	@Test
 	public void getHistoryTest() {
-		fail();	
+		Calculator cal = new Calculator();
+		assertEquals("", cal.getHistory());
 	}
 }
